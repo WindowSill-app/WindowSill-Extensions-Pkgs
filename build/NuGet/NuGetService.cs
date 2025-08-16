@@ -3,8 +3,6 @@ using NuGet.Models.NuGetIndex;
 using NuGet.Models.NuGetRegistration;
 using NuGet.Models.NuGetSearch;
 
-using Octokit.Internal;
-
 using System;
 using System.Linq;
 using System.Net.Http;
@@ -111,32 +109,6 @@ internal class NuGetService : IDisposable
             && hasVersion
             && hasAuthors
             && catalogEntry.listed;
-    }
-
-    /// <summary>
-    /// Gets download count for a package
-    /// </summary>
-    public async Task<long> GetDownloadCountAsync(string packageId)
-    {
-        try
-        {
-            string? searchServiceUrl = await _searchServiceUrl;
-            if (string.IsNullOrEmpty(searchServiceUrl))
-            {
-                throw new Exception("Search service URL is not available.");
-            }
-
-            string url = $"{searchServiceUrl}?q={packageId}&prerelease=true&semVerLevel=2.0.0";
-            NuGetSearchResponse? searchResponse = await _httpClient.GetFromJsonAsync<NuGetSearchResponse>(url, _jsonOptions);
-
-            return searchResponse?.data?.FirstOrDefault()?.totalDownloads ?? 0;
-        }
-        catch (Exception ex)
-        {
-            Serilog.Log.Error("Failed to get download count for package {PackageId}: {Error}", packageId, ex.Message);
-        }
-
-        return -1;
     }
 
     private async Task<NuGetPackageFromSearchResponse?> SearchPackagesAsync(string packageId)
