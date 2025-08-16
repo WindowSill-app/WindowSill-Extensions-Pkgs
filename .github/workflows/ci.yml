@@ -75,11 +75,4 @@ jobs:
 
       - name: Create Release Summary
         run: |
-          echo "## ?? Extension Manifest Updated" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          if [ -f "output/manifest.json" ]; then
-            echo "### Summary:" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "### Available at:" >> $GITHUB_STEP_SUMMARY
-            echo "- ?? [Extension Manifest](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/output/manifest.json)" >> $GITHUB_STEP_SUMMARY
-          fi
+          echo "# Extension Manifest Updated to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/manifest.json
