@@ -1,21 +1,15 @@
-﻿name: Generate Extension Manifest
+﻿name: Validate Extensions
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
 
 permissions:
-  contents: write # to write to the repository during the workflow
-  pages: write    # to deploy to Pages
-  id-token: write # to verify the deployment originates from an appropriate source
+  contents: write
 
 jobs:
   validate-pr:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -31,48 +25,3 @@ jobs:
 
       - name: 'Run: GenerateManifest'
         run: ./build.cmd GenerateManifest
-
-  deploy-manifest:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Cache .nuke/temp, ~/.nuget/packages
-        uses: actions/cache@v4
-        with:
-          path: |
-            .nuke/temp
-            ~/.nuget/packages
-          key: ${{ runner.os }}-${{ hashFiles('global.json', 'source/**/*.csproj') }}
-
-      - name: 'Run: GenerateManifest'
-        run: ./build.cmd GenerateManifest
-
-      - name: Check manifest.json exists
-        run: |
-          if [ ! -f "output/manifest.json" ]; then
-            echo "manifest.json not found!"
-            exit 1
-          fi
-
-      - name: Prepare Pages artifact
-        run: |
-          mkdir -p pages-artifact
-          cp output/manifest.json pages-artifact/
-
-      - name: Upload manifest.json as Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: pages-artifact
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-
-      - name: Create Release Summary
-        run: |
-          echo "# Extension Manifest Updated to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/manifest.json"

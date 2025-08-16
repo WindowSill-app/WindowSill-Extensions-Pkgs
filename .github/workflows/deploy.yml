@@ -1,0 +1,56 @@
+name: Deploy Extension Manifest
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy-manifest:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cache .nuke/temp, ~/.nuget/packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            .nuke/temp
+            ~/.nuget/packages
+          key: ${{ runner.os }}-${{ hashFiles('global.json', 'source/**/*.csproj') }}
+
+      - name: 'Run: GenerateManifest'
+        run: ./build.cmd GenerateManifest
+
+      - name: Check manifest.json exists
+        run: |
+          if [ ! -f "output/manifest.json" ]; then
+            echo "manifest.json not found!"
+            exit 1
+          fi
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p pages-artifact
+          cp output/manifest.json pages-artifact/
+
+      - name: Upload manifest.json as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages-artifact
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
+      - name: Create Release Summary
+        run: |
+          echo "# Extension Manifest Updated to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/manifest.json"
