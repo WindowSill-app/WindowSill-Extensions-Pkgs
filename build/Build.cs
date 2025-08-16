@@ -145,7 +145,7 @@ class Build : NukeBuild
                 manifests.Add(
                     new ManifestEntry
                     {
-                        PackageId = catalogEntry.packageid,
+                        PackageId = catalogEntry.packageid!,
                         IconUrl = catalogEntry.iconUrl,
                         Category = extension.Category!
                     });

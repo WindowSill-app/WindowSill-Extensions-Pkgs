@@ -5,13 +5,13 @@ namespace NuGet.Models.NuGetRegistration;
 public class Dependencies
 {
     [JsonPropertyName("@id")]
-    public string id { get; set; }
+    public string? id { get; set; }
 
     [JsonPropertyName("@container")]
-    public string container { get; set; }
+    public string? container { get; set; }
 
     [JsonPropertyName("@type")]
-    public string type { get; set; }
-    public string range { get; set; }
-    public string registration { get; set; }
+    public string? type { get; set; }
+    public string? range { get; set; }
+    public string? registration { get; set; }
 }

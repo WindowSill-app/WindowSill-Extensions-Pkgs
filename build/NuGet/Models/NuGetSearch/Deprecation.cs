@@ -4,5 +4,5 @@ namespace NuGet.Models.NuGetSearch;
 
 public class Deprecation
 {
-    public List<string> reasons { get; set; }
+    public List<string>? reasons { get; set; }
 }

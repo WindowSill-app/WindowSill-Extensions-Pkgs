@@ -143,7 +143,7 @@ internal class NuGetService : IDisposable
 
             string url = $"{searchServiceUrl}?q={Uri.EscapeDataString(packageId.ToLowerInvariant())}&prerelease=true&semVerLevel=2.0.0";
             var response = await _httpClient.GetFromJsonAsync<NuGetSearchResponse>(url, _jsonOptions);
-            var package = response?.data.FirstOrDefault(p => p.packageid.Equals(packageId, StringComparison.OrdinalIgnoreCase));
+            var package = response?.data?.FirstOrDefault(p => p.packageid is not null && p.packageid.Equals(packageId, StringComparison.OrdinalIgnoreCase));
 
             if (package is null)
             {
@@ -166,7 +166,7 @@ internal class NuGetService : IDisposable
             string url = $"https://api.nuget.org/v3/index.json";
             NuGetIndexResponse? response = await _httpClient.GetFromJsonAsync<NuGetIndexResponse>(url, _jsonOptions);
 
-            return response?.resources.FirstOrDefault(r => r.type == "SearchQueryService")?.id;
+            return response?.resources?.FirstOrDefault(r => r.type == "SearchQueryService")?.id;
         }
         catch (Exception ex)
         {

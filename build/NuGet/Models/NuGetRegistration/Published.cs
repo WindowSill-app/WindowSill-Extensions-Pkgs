@@ -5,5 +5,5 @@ namespace NuGet.Models.NuGetRegistration;
 public class Published
 {
     [JsonPropertyName("@type")]
-    public string type { get; set; }
+    public string? type { get; set; }
 }

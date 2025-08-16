@@ -5,8 +5,8 @@ namespace NuGet.Models.NuGetRegistration;
 public class PackageTargetFrameworks
 {
     [JsonPropertyName("@id")]
-    public string id { get; set; }
+    public string? id { get; set; }
 
     [JsonPropertyName("@container")]
-    public string container { get; set; }
+    public string? container { get; set; }
 }

@@ -5,5 +5,5 @@ namespace NuGet.Models.NuGetRegistration;
 public class Reasons
 {
     [JsonPropertyName("@container")]
-    public string container { get; set; }
+    public string? container { get; set; }
 }

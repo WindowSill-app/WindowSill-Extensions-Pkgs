@@ -5,5 +5,5 @@ namespace NuGet.Models.NuGetRegistration;
 public class PackageContent
 {
     [JsonPropertyName("@type")]
-    public string type { get; set; }
+    public string? type { get; set; }
 }

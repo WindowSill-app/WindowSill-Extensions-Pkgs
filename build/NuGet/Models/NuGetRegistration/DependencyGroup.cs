@@ -8,13 +8,13 @@ namespace NuGet.Models.NuGetRegistration;
 public class DependencyGroup
 {
     [JsonPropertyName("@id")]
-    public string id { get; set; }
+    public string? id { get; set; }
 
     [JsonPropertyName("@type")]
-    public string type { get; set; }
-    public string targetFramework { get; set; }
-    public List<Dependency> dependencies { get; set; }
+    public string? type { get; set; }
+    public string? targetFramework { get; set; }
+    public List<Dependency>? dependencies { get; set; }
 
     [JsonPropertyName("@container")]
-    public string container { get; set; }
+    public string? container { get; set; }
 }

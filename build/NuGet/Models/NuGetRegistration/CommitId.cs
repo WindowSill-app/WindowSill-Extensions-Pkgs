@@ -5,5 +5,5 @@ namespace NuGet.Models.NuGetRegistration;
 public class CommitId
 {
     [JsonPropertyName("@id")]
-    public string id { get; set; }
+    public string? id { get; set; }
 }
