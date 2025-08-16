@@ -75,4 +75,4 @@ jobs:
 
       - name: Create Release Summary
         run: |
-          echo "# Extension Manifest Updated to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/manifest.json
+          echo "# Extension Manifest Updated to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/manifest.json"
