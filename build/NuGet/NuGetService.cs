@@ -90,7 +90,14 @@ internal class NuGetService : IDisposable
     public bool ValidateExtensionPackage(CatalogEntry catalogEntry, string expectedTag)
     {
         System.Collections.Generic.List<string> tags = catalogEntry.tags ?? [];
-        bool hasRequiredTags = tags.Any(tag => string.Equals(tag, expectedTag, StringComparison.OrdinalIgnoreCase));
+        bool hasRequiredTags
+            = tags.Any(
+                tag => string.Equals(tag, expectedTag, StringComparison.OrdinalIgnoreCase));
+
+        bool hasDependencyOnWindowSillApi
+            = catalogEntry.dependencyGroups?.Any(
+                group =>group.dependencies?.Any(
+                    dep => string.Equals(dep.packageId, "WindowSill.Api", StringComparison.OrdinalIgnoreCase)) ?? false) ?? false;
 
         bool hasDescription = !string.IsNullOrWhiteSpace(catalogEntry.description);
         bool hasPackageContent = !string.IsNullOrWhiteSpace(catalogEntry.packageContent);
@@ -98,6 +105,7 @@ internal class NuGetService : IDisposable
         bool hasAuthors = !string.IsNullOrWhiteSpace(catalogEntry.authors);
 
         return hasRequiredTags
+            && hasDependencyOnWindowSillApi
             && hasDescription
             && hasPackageContent
             && hasVersion

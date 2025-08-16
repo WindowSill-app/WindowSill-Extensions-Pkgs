@@ -12,6 +12,9 @@ public class Dependencies
 
     [JsonPropertyName("@type")]
     public string? type { get; set; }
+
+    [JsonPropertyName("id")]
+    public string? packageId { get; set; }
     public string? range { get; set; }
     public string? registration { get; set; }
 }
