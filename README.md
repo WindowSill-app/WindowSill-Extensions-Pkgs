@@ -5,7 +5,8 @@ This repository manages approved extensions for WindowSill using a GitHub-based 
 ## How to publish a new extension for WindowSill
 
 1. **Extension authors** publish their WindowSill extensions as NuGet packages to nuget.org
-2. **Extension authors** submit a PR to add their package to `extensions.json`.
+2. **Extension authors** submit a PR to add their package to `extensions.json`. 
+   [Check Out this Example PR](https://github.com/WindowSill-app/WindowSill-Extensions-Pkgs/pull/3)
    This file needs 2 information:
    - `packageId`: The NuGet package ID
    - `Category`: The category of the extension, which should be one of the following:
