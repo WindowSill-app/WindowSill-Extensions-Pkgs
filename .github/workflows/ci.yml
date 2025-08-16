@@ -32,9 +32,11 @@ jobs:
       - name: 'Run: GenerateManifest'
         run: ./build.cmd GenerateManifest
 
-  publish-manifest:
+  deploy-manifest:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - uses: actions/checkout@v4
         with:
