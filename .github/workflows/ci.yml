@@ -64,7 +64,7 @@ jobs:
           cp output/manifest.json pages-artifact/
 
       - name: Upload manifest.json as Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: pages-artifact
 
