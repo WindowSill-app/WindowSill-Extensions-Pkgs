@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Cache .nuke/temp, ~/.nuget/packages
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             .nuke/temp
@@ -41,7 +41,7 @@ jobs:
           fetch-depth: 0
 
       - name: Cache .nuke/temp, ~/.nuget/packages
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             .nuke/temp
