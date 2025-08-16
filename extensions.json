@@ -1,5 +1,9 @@
 [
   {
+    "packageId": "WindowSill.URLHelper",
+    "category": "Utilities"
+  },
+  {
     "packageId": "WindowSill.WebBrowser",
     "category": "Integration"
   }
