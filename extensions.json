@@ -4,6 +4,10 @@
     "category": "Utilities"
   },
   {
+    "packageId": "WindowSill.Teams",
+    "category": "Integration"
+  },
+  {
     "packageId": "WindowSill.WebBrowser",
     "category": "Integration"
   }
