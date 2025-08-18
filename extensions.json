@@ -4,6 +4,10 @@
     "category": "Utilities"
   },
   {
+    "packageId": "WindowSill.ShortTermReminder",
+    "category": "Productivity"
+  },
+  {
     "packageId": "WindowSill.Teams",
     "category": "Integration"
   },
