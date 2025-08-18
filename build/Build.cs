@@ -138,7 +138,7 @@ class Build : NukeBuild
                 bool isValid = nugetService.ValidateExtensionPackage(catalogEntry, WindowSillExtensionTag);
                 if (!isValid)
                 {
-                    Serilog.Log.Error("Package {PackageId} does not appear to be a valid extension. Ensure it has a tag {WindowSillExtensionTag} and has a dependency on {API}.", catalogEntry.packageid, WindowSillExtensionTag, "WindowSill.API");
+                    Serilog.Log.Error("Package {PackageId} does not appear to be a valid extension. Ensure the NuGet package has a description, authors, a tag {WindowSillExtensionTag} and has a dependency on {API}.", catalogEntry.packageid, WindowSillExtensionTag, "WindowSill.API");
                     Assert.Fail(string.Empty);
                 }
 
