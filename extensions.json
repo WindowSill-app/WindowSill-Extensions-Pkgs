@@ -1,5 +1,9 @@
 [
   {
+    "packageId": "WindowSill.MediaControl",
+    "category": "Media"
+  },
+  {
     "packageId": "WindowSill.URLHelper",
     "category": "Utilities"
   },
