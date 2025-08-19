@@ -4,6 +4,10 @@
     "category": "Productivity"
   },
   {
+    "packageId": "WindowSill.ImageHelper",
+    "category": "Media"
+  },
+  {
     "packageId": "WindowSill.MediaControl",
     "category": "Media"
   },
