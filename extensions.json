@@ -1,5 +1,9 @@
 [
   {
+    "packageId": "WindowSill.ClipboardHistory",
+    "category": "Productivity"
+  },
+  {
     "packageId": "WindowSill.MediaControl",
     "category": "Media"
   },
