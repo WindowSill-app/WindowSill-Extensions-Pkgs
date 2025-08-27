@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions
+    url: https://discord.gg/M4xce6h6Wh
+    about: 'For general questions about WindowSill or get help with extension development, join our Discord'
