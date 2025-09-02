@@ -23,3 +23,5 @@ This repository manages approved extensions for WindowSill using a GitHub-based 
 
 1. **Extension authors** publish a new version of their NuGet package to nuget.org.
 1. WindowSill website will automatically detect the new version and update the extension catalog within a day.
+
+2. test
