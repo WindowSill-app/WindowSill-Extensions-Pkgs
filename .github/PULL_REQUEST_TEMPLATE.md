@@ -4,6 +4,8 @@
 
 Thank you for your interest in WindowSill.
 
+<!--- Please provide a short description of what your extension does -->
+
 ## Quality check
 
 Before creating this PR:
@@ -24,3 +26,7 @@ Before creating this PR:
         - [ ] Large size
         - [ ] Medium size
         - [ ] Small size
+
+### Screenshots
+
+<!--- Please provide some screenshots -->
