@@ -4,6 +4,10 @@
 		"category": "Productivity"
 	},
 	{
+		"packageId": "WindowSill.DevToys",
+		"category": "Development"
+	},
+	{
 		"packageId": "WindowSill.ImageHelper",
 		"category": "Media"
 	},
