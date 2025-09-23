@@ -16,6 +16,10 @@
 		"category": "Media"
 	},
 	{
+		"packageId": "WindowSill.PerfCounter",
+		"category": "Utilities"
+	},
+	{
 		"packageId": "WindowSill.URLHelper",
 		"category": "Utilities"
 	},
