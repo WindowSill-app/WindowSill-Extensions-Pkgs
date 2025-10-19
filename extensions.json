@@ -20,6 +20,10 @@
 		"category": "Utilities"
 	},
 	{
+		"packageId": "WindowSill.UnitConverter",
+		"category": "AI"
+	},
+	{
 		"packageId": "WindowSill.URLHelper",
 		"category": "Utilities"
 	},
