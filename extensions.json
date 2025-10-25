@@ -42,5 +42,9 @@
 	{
 		"packageId": "HoroscopeSill",
 		"category": "Integration"
+	},
+	{
+	    "packageId": "NetStats",
+	    "category": "Utilities"
 	}
 ]
