@@ -1,5 +1,9 @@
 [
 	{
+		"packageId": "WindowSill.AppLauncher",
+		"category": "Productivity"
+	},
+	{
 		"packageId": "WindowSill.ClipboardHistory",
 		"category": "Productivity"
 	},
