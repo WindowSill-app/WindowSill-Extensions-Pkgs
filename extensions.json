@@ -50,5 +50,9 @@
 	{
 	    "packageId": "NetStats",
 	    "category": "Utilities"
+	},
+	{
+	    "packageId": "WindowSill.PomodoroTimer",
+	    "category": "Productivity"
 	}
 ]
