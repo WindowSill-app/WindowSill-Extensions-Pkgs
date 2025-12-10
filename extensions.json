@@ -54,5 +54,9 @@
 	{
 	    "packageId": "WindowSill.PomodoroTimer",
 	    "category": "Productivity"
+	},
+	{
+	    "packageId": "WindowSill.ColorPicker",
+	    "category": "Utilities"
 	}
 ]
