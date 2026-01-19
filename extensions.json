@@ -58,5 +58,9 @@
 	{
 	    "packageId": "WindowSill.ColorPicker",
 	    "category": "Utilities"
+	},
+	{
+	    "packageId": "WindowSill.SimpleCalculator",
+	    "category": "Utilities"
 	}
 ]
