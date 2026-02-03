@@ -62,5 +62,9 @@
 	{
 	    "packageId": "WindowSill.SimpleCalculator",
 	    "category": "Utilities"
+	},
+	{
+	    "packageId": "WindowSill.ScreenRecorder",
+	    "category": "Utilities"
 	}
 ]
