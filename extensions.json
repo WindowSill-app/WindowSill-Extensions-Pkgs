@@ -62,5 +62,9 @@
 	{
 	    "packageId": "WindowSill.ScreenRecorder",
 	    "category": "Utilities"
+	},
+	{
+	    "packageId": "WindowSill.OutlookCalendar",
+	    "category": "Integration"
 	}
 ]
