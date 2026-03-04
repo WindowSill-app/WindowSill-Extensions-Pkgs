@@ -40,6 +40,10 @@
 		"category": "Integration"
 	},
 	{
+		"packageId": "WindowSill.TextFinder",
+		"category": "Productivity"
+	},
+	{
 		"packageId": "WindowSill.WebBrowser",
 		"category": "Integration"
 	},
