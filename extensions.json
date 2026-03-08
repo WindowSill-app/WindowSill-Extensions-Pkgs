@@ -44,6 +44,10 @@
 		"category": "Productivity"
 	},
 	{
+		"packageId": "WindowSill.UniversalCommands",
+		"category": "Integration"
+	},
+	{
 		"packageId": "WindowSill.WebBrowser",
 		"category": "Integration"
 	},
