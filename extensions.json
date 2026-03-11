@@ -48,6 +48,10 @@
 		"category": "Integration"
 	},
 	{
+		"packageId": "WindowSill.VideoHelper",
+		"category": "Media"
+	},
+	{
 		"packageId": "WindowSill.WebBrowser",
 		"category": "Integration"
 	},
