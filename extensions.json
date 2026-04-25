@@ -74,5 +74,9 @@
 	{
 	    "packageId": "WindowSill.ScreenRecorder",
 	    "category": "Utilities"
+	},
+	{
+	    "packageId": "CharStats",
+	    "category": "Utilities"
 	}
 ]
