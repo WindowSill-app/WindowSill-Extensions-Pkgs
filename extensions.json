@@ -8,12 +8,20 @@
 		"category": "Productivity"
 	},
 	{
+		"packageId": "WindowSill.Date",
+		"category": "Integration"
+	},
+	{
 		"packageId": "WindowSill.DevToys",
 		"category": "Development"
 	},
 	{
 		"packageId": "WindowSill.ImageHelper",
 		"category": "Media"
+	},
+	{
+		"packageId": "WindowSill.InlineTerminal",
+		"category": "Development"
 	},
 	{
 		"packageId": "WindowSill.MediaControl",
