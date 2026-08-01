@@ -20,6 +20,10 @@
 		"category": "Media"
 	},
 	{
+		"packageId": "WindowSill.FileHelper",
+		"category": "Utilities"
+	},
+	{
 		"packageId": "WindowSill.InlineTerminal",
 		"category": "Development"
 	},
@@ -64,27 +68,27 @@
 		"category": "Integration"
 	},
 	{
-	    "packageId": "NetStats",
-	    "category": "Utilities"
+		"packageId": "NetStats",
+		"category": "Utilities"
 	},
 	{
-	    "packageId": "WindowSill.PomodoroTimer",
-	    "category": "Productivity"
+		"packageId": "WindowSill.PomodoroTimer",
+		"category": "Productivity"
 	},
 	{
-	    "packageId": "WindowSill.ColorPicker",
-	    "category": "Utilities"
+		"packageId": "WindowSill.ColorPicker",
+		"category": "Utilities"
 	},
 	{
-	    "packageId": "WindowSill.SimpleCalculator",
-	    "category": "Utilities"
+		"packageId": "WindowSill.SimpleCalculator",
+		"category": "Utilities"
 	},
 	{
-	    "packageId": "WindowSill.ScreenRecorder",
-	    "category": "Utilities"
+		"packageId": "WindowSill.ScreenRecorder",
+		"category": "Utilities"
 	},
 	{
-	    "packageId": "CharStats",
-	    "category": "Utilities"
+		"packageId": "CharStats",
+		"category": "Utilities"
 	}
 ]
